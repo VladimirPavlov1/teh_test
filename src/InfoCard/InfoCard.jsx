@@ -4,17 +4,19 @@ import { useState } from "react";
 const InfoCard = ({tweets,followers}) => {
 
     const [btnTitle, setBtnTitle] = useState('follow')
-    const [tweetsCounter,setTweetsCounter]=useState(tweets||0);
+    const [followersCounter,setFollowersCounter]=useState(followers||0);
     const [active, setActive] = useState(false)
     const handleClick = ()=>{
        switch(btnTitle){
         case 'follow':
             setBtnTitle('following');
             setActive(true);
+            setFollowersCounter(prevstate=>prevstate+1)
             break;
         case 'following':
             setBtnTitle('follow');
             setActive(false);
+            setFollowersCounter(prevstate=>prevstate-1)
             break;
         default:  return 'follow';
        }
@@ -22,8 +24,8 @@ const InfoCard = ({tweets,followers}) => {
 
     return (
         <Wrapper>
-            <Text>{tweetsCounter} TWEETS</Text>
-            <Text>{followers} FOLLOWERS</Text>
+            <Text>{tweets} TWEETS</Text>
+            <Text>{followersCounter} FOLLOWERS</Text>
             <Btn onClick={()=>handleClick()} active={active}>{btnTitle}</Btn>
         </Wrapper>
     );

@@ -1,12 +1,13 @@
 import CardItem from "CardItem/CardItem";
+import { List } from "./CardList.styled";
 
 const CardList = ({users}) => {
     return (
-       <ul>
+       <List>
         {users.map(user=>
             <CardItem key={user.id} {...user}/>
             )}
-       </ul>
+       </List>
         
     );
 }

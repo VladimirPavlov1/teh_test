@@ -5,7 +5,11 @@ export const Item = styled.li`
   display: block;
   width: 380px;
   height: 460px;
-  margin: 20px auto;
+  margin: 20px 10px;
+
+  @media (min-width: 768px) {
+    margin: 10px 4px;
+  }
 `;
 
 export const SeparLine = styled.div`
@@ -21,6 +25,8 @@ export const AvatarWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
