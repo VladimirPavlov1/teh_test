@@ -1,6 +1,8 @@
 import PresentCard from "PresentCard/PresentCard";
+import InfoCard from "InfoCard/InfoCard";
 import { Item, SeparLine,AvatarWrapper } from "./CardItem.styled";
 import avatar_temp from 'images/Avatar@1x.png'
+
 
 const CardItem = ({user,tweets,followers,avatar,id}) => {
     console.log(user)
@@ -11,11 +13,8 @@ const CardItem = ({user,tweets,followers,avatar,id}) => {
             <AvatarWrapper>
                 <img src={avatar_temp} alt="user-avatar" />
             </AvatarWrapper>
-            <div className='InfoCard'>
-            <p className='Tweets'>{tweets}</p>
-            <p className='Followers'>{followers}</p>
-            <button></button>
-            </div>
+            <InfoCard tweets={tweets} followers={followers}/>
+          
         </Item>
             
     );

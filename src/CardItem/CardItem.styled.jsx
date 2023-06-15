@@ -5,6 +5,7 @@ export const Item = styled.li`
   display: block;
   width: 380px;
   height: 460px;
+  margin: 20px auto;
 `;
 
 export const SeparLine = styled.div`
