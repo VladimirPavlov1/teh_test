@@ -1,15 +1,13 @@
-import { Background,PresentImage,Logo} from "./PresentCard.styled";
-import { ReactComponent as LogoGoit } from 'images/logo_1x.svg'
+import { Background,PresentImage} from "./PresentCard.styled";
+import Logo from "Logo/Logo"
 
 
 
 const PresentCard = () => {
     return (
-    
+        
          <Background>
-            <Logo>
-                <LogoGoit/>
-            </Logo>
+           <Logo/>
             <PresentImage/>
           </Background>
     

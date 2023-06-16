@@ -6,6 +6,8 @@ import './App.css';
 const Home = lazy(()=>import('pages/Home/Home'));
 const Tweets = lazy(()=>import('pages/Tweets/Tweets'))
 
+console.log(Home)
+
 const App = () => {
   return (
    <Routes>
