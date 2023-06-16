@@ -24,4 +24,11 @@ export const Item = styled.li`
 
 export const Card = styled.img`
 width: 120px;
+
+@media (min-width: 768px) {
+  width: 250px;
+}
+@media (min-width: 1280px) {
+  width: 430px;
+}
 `;

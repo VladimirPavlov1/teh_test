@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import axios from 'axios';
 import Loader from 'Loader/Loader';
 import Pagination from 'Pagination/Pagination';
-import Header from "Header/Header";
 
 const Tweets = ()=> {
 
@@ -46,7 +45,7 @@ const Tweets = ()=> {
   console.log(limitItemsOnPage)
   return (
     <Container>
-        <Header/>
+
       {isLoading && <Loader />}
       {error && <p>Щось пішло не так, спробуй ще раз...</p>}
       {users && (

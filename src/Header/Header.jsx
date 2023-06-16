@@ -1,10 +1,12 @@
-import Logo from "Logo/Logo";
-import { Link, HeaderWrapper} from "./Header.styled";
+import { ReactComponent as LogoGoit } from 'images/logo_1x.svg'
+import { Link, HeaderWrapper, LogoHeader} from "./Header.styled";
 
 const Header = () => {
   return (
     <HeaderWrapper>
-     <Logo />
+     <LogoHeader>
+        <LogoGoit/>
+     </LogoHeader>
       <nav>
         <Link to="/">
           Home

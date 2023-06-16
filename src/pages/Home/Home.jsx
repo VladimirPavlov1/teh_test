@@ -9,12 +9,12 @@ const Home = () => {
         <Item>
           <Card src={tweets1} alt=" cards" />
         </Item>
-        <li>
+        <Item>
           <Card src={tweets1} alt="cards" />
-        </li>
-        <li>
+        </Item>
+        <Item>
           <Card src={tweets1} alt="cards" />
-        </li>
+        </Item>
       </List>
     </Main>
   );
