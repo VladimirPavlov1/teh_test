@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://vladimirpavlov1.github.io/teh_test/",
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@reduxjs/toolkit": "^1.9.3",
@@ -26,7 +27,6 @@
     "eject": "react-scripts eject",
     "build:staging": "env-cmd -f .env.staging npm run build"
   },
- 
   "eslintConfig": {
     "extends": [
       "react-app",
