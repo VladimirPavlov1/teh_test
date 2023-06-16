@@ -5,7 +5,7 @@ import { Item, SeparLine,AvatarWrapper } from "./CardItem.styled";
 
 
 
-const CardItem = ({tweets,followers,avatar}) => {
+const CardItem = ({tweets,followers,avatar,id}) => {
 
 
   const totalTweets = ()=>{
@@ -25,7 +25,7 @@ const CardItem = ({tweets,followers,avatar}) => {
             <AvatarWrapper>
                 <img src={avatar} alt="user-avatar" />
             </AvatarWrapper>
-            <InfoCard tweets={totalTweets()} followers={followers}/>
+            <InfoCard tweets={totalTweets()} followers={followers} id={id}/>
           
         </Item>
             
