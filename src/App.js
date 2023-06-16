@@ -1,65 +1,20 @@
-import { Container } from 'App.styled';
+import {lazy} from 'react'
+import {Routes,Route} from 'react-router-dom'
+import SharedLayout from 'SharedLayout/SharedLayout';
 import './App.css';
-import CardList from 'CardList/CardList';
-import { useState, useEffect } from 'react'
-import axios from 'axios';
-import Loader from 'Loader/Loader';
-import Pagination from 'Pagination/Pagination';
 
-function App() {
+const Home = lazy(()=>import('pages/Home/Home'));
+const Tweets = lazy(()=>import('pages/Tweets/Tweets'))
 
-  const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        setIsLoading(true);
-        const response = await axios.get('https://6409875d6ecd4f9e18b35e8e.mockapi.io/users');
-        setUsers([...response.data])
-      } catch (error) {
-        setError(error.mesage)
-      }
-      finally {
-        setIsLoading(false)
-      }
-
-    }
-    fetchUsers()
-  }, [])
-
-
-
-  const [currentPage] =useState(1);
-  const [limitItemsOnPage,setLimitItemsOnPage]=useState(3);
-  
-  const lastPageIndex = currentPage * limitItemsOnPage;
-  const firstPageIndex = lastPageIndex - limitItemsOnPage;
-  const quantityItemsOnPage = users.slice(firstPageIndex,lastPageIndex)
-
-  const handleClick=()=>{
-    setLimitItemsOnPage(prevState=>prevState+3)
-  }
-
-  console.log(limitItemsOnPage)
+const App = () => {
   return (
-    <Container>
-      {isLoading && <Loader />}
-      {error && <p>Щось пішло не так, спробуй ще раз...</p>}
-      {users && (
-        <>
-          <CardList users={quantityItemsOnPage} />
-          <Pagination  
-          onClick={handleClick} 
-          isLoading={isLoading} 
-          limitItemsOnPage={limitItemsOnPage}
-          users={users}
-          />
-        </>
-      )}
-    </Container>
+   <Routes>
+      <Route path='/' element={<SharedLayout/>}>
+        <Route index element={<Home/>}/>
+        <Route path='tweets' element={<Tweets/>}/>
+        <Route path='*' element={<Home/>}/>
+      </Route>
+   </Routes>
   );
 }
 
