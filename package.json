@@ -2,7 +2,7 @@
   "name": "teh_test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vladimirpavlov1.github.io/teh_test",
+  "homepage": "https://vladimirpavlov1.github.io/teh_test/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
