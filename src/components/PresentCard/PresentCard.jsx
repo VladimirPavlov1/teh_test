@@ -1,5 +1,5 @@
 import { Background,PresentImage} from "./PresentCard.styled";
-import Logo from "Logo/Logo"
+import Logo from "components/Logo/Logo"
 
 
 

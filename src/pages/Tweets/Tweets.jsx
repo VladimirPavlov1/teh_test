@@ -1,9 +1,9 @@
-import  Container from "../../Container/Container"
-import CardList from 'CardList/CardList';
+import  Container from "../../components/Container/Container"
+import CardList from 'components/CardList/CardList';
 import { useState, useEffect } from 'react'
 import axios from 'axios';
-import Loader from 'Loader/Loader';
-import Pagination from 'Pagination/Pagination';
+import Loader from 'components/Loader/Loader';
+import Pagination from 'components/Pagination/Pagination';
 
 const Tweets = ()=> {
 

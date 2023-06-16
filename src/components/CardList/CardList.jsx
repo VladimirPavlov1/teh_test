@@ -1,4 +1,4 @@
-import CardItem from "CardItem/CardItem";
+import CardItem from "components/CardItem/CardItem";
 import { List } from "./CardList.styled";
 
 const CardList = ({users}) => {

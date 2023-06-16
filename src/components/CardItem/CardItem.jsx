@@ -1,5 +1,5 @@
-import PresentCard from "PresentCard/PresentCard";
-import InfoCard from "InfoCard/InfoCard";
+import PresentCard from "components/PresentCard/PresentCard";
+import InfoCard from "components/InfoCard/InfoCard";
 import { Item, SeparLine,AvatarWrapper } from "./CardItem.styled";
 
 
